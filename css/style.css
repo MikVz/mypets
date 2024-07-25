@@ -1,0 +1,154 @@
+/* Hero */
+.hero
+{
+  margin: 0 auto;
+  height: 100vh;
+  justify-content: space-evenly !important;
+}
+
+.hero p {
+  max-width: 367px;
+  margin: 24px 0;
+}
+
+/* About */
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.about h2 {
+  max-width: 400px;
+}
+
+.about p {
+  margin: 24px 0;
+}
+
+.grid:nth-child(1)
+{
+  grid-column: 1/2;
+  display: flex;
+  justify-content: center;
+}
+
+.grid:nth-child(2)
+{
+  grid-column: 2/3;
+}
+
+.title
+{
+  font-size: 40px;
+  color: var(--primary);
+}
+
+.flexDiv
+{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+
+
+.cronograma .title, .duvidas .title
+{
+  text-align: center;
+}
+
+.cronograma
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.duvidas
+{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
+.question {
+  background: var(--primary);
+  justify-content: space-between !important;
+  padding: 10px 24px;
+}
+
+.item > label
+{
+  
+  background: var(--primary);
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  padding-left: 12px;
+}
+
+
+
+.item > ul
+{
+  width: 100%;
+  list-style: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: all .4s linear;
+  padding: 0;
+}
+
+.item > input
+{
+  display: none;
+}
+
+.item > input:checked ~ ul
+{
+  height: auto;
+  max-height: 200px;
+  transform: all;
+}
+
+.item > input:checked ~ label
+{
+  background-color: #7B61FF;
+  border: none;
+  color: #fff;
+  padding-left: 12px;
+}
+
+/* Laptop 960px */
+
+@media only screen and (max-width: 960px)
+{
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Tablet 720px */
+
+@media only screen and (max-width: 720px)
+{
+  .container {
+    max-width: 720px;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+}
